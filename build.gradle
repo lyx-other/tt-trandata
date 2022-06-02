@@ -1,0 +1,32 @@
+plugins
+{
+    id 'java'
+}
+
+group 'com.lyx'
+version '1.0'
+
+repositories
+{
+    maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+
+dependencies
+{
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22' // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation group: 'cn.hutool', name: 'hutool-all', version: '5.7.17' // https://mvnrepository.com/artifact/cn.hutool/hutool-all
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '7.0.2.Final' // https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+    implementation group: 'org.apache.tomcat', name: 'tomcat-jasper-el', version: '10.1.0-M8' // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper-el
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.0'
+    implementation group: 'com.alibaba', name: 'easyexcel', version: '3.1.0'
+}
+
+test
+{
+    useJUnitPlatform()
+}
